@@ -1,10 +1,7 @@
 #!/usr/bin/env python2.7
 import requests, json
 import subprocess
-
-download = False
-download = True
-
+import os
 
 fullname2short = {"embryonic facial prominence":"CF",
 		  "forebrain":"FB",
@@ -99,6 +96,7 @@ all_datasets = {"E10_5":['ENCSR349UOB',#CF
                       'ENCSR022KAT']#MB
 }
 
+os.system("mkdir -p raw_ChIP/")
 
 for age in all_datasets.iterkeys():
     for accession in all_datasets[age]:
@@ -147,14 +145,10 @@ for age in all_datasets.iterkeys():
                 #print output_prefix
                 # Download
                 url = 'https://www.encodeproject.org'+related_dataset['files'][ind_file]['href']
-                output_filename = "raw/" + output_prefix + "." + str(ind_file) + ".bam"
-                print(output_filename+"\t"+url)
-                if download:                           
-                    url = 'https://www.encodeproject.org'+related_dataset['files'][ind_file]['href']
-                    output_filename = "raw/" + output_prefix + "." + str(ind_file) + ".bam"
-                    subprocess.check_call(['curl',
-                                           '-RL',
-                                           url,
-                                           "-o",
-                                           output_filename
-                    ])
+                output_filename = "raw_ChIP/" + output_prefix + "." + str(ind_file) + ".bam"
+                subprocess.check_call(['curl',
+                                       '-RL',
+                                       url,
+                                       "-o",
+                                       output_filename
+                ])
