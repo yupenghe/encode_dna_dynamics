@@ -46,3 +46,11 @@ mCG dynamics in tissue-specific CG-DMRs (Figure 2a-d).
 Rscript mCG_dynamics/plot_barchart_merge.R
 Rscript mCG_dynamics/plot_Heatmap_merge.R
 ```
+
+`mCG_dynamics/cluster_FB_DMR_H3K27ac.R` is used to cluster forebrain-specific CG-DMRs
+with distinct mCG and H3K27ac dynamics during development into 8 groups. Two scripts
+below plot the mCG and H3K27ac profile of different classes of forebrain-specific CG-DMRs, and the correlation between mCG and H3K27ac in these CG-DMRs (Figure 2e-f).
+```bash
+Rscript mCG_dynamics/plot_Heatmap_H3K27ac_FB.R
+Rscript mCG_dynamics/plot_H3K27ac_enrichment_FB_DMR.R
+```
