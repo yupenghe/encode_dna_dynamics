@@ -55,3 +55,8 @@ below plot the mCG and H3K27ac profile of different classes of forebrain-specifi
 Rscript mCG_dynamics/plot_Heatmap_H3K27ac_FB.R
 Rscript mCG_dynamics/plot_H3K27ac_enrichment_FB_DMR.R
 ```
+
+### large hypo- CG-DMR
+`large_hypo_DMR/plot_lhDMR_epimark.R` and `large_hypo_DMR/plot_ovlp_SE.R` are used
+to plot the intensity of epigenetic modification in large hypo- CG-DMRs, and the overlap
+between large hypo- CG-DMRs and super-enhancers. 
