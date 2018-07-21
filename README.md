@@ -65,5 +65,5 @@ between large hypo- CG-DMRs and super-enhancers (Figure 3b, c).
 `mCH_domain_calling/get_mCHdomain.pl` and `mCH_domain_calling/call_changepoint.R` are scripts used to call mCH domains.
 
 ### Clustering mCH domains
-Scripts in `mCH_domain_clustering` are used to cluster mCH domains based on their mCH dynamics across tissues as well as visualization of the mCH dynamics of clustered mCH domain (Figure 4c and Extended Data Figure 7d).
+Scripts in `mCH_domain_clustering/` are used to cluster mCH domains based on their mCH dynamics across tissues as well as visualization of the mCH dynamics of clustered mCH domain (Figure 4c and Extended Data Figure 7d).
 
