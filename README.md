@@ -13,6 +13,9 @@ Work in progress
 * (R package) amap
 * (R package) gplots
 * (R package) fastcluster
+* (R package) doParallel
+* (R package) foreach
+* (R package) changepoint
 
 ## Scripts
 ### Data collection
