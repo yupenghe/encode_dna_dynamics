@@ -60,3 +60,7 @@ Rscript mCG_dynamics/plot_H3K27ac_enrichment_FB_DMR.R
 `large_hypo_DMR/plot_lhDMR_epimark.R` and `large_hypo_DMR/plot_ovlp_SE.R` are used
 to plot the intensity of epigenetic modification in large hypo- CG-DMRs, and the overlap
 between large hypo- CG-DMRs and super-enhancers. 
+
+### mCH domain calling
+`mCH_domain_calling/get_mCHdomain.pl` and `mCH_domain_calling/call_changepoint.R` are scripts used to call mCH domains.
+
