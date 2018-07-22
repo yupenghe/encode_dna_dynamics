@@ -70,3 +70,5 @@ between large hypo- CG-DMRs and super-enhancers (Figure 3b, c).
 ### Clustering mCH domains
 Scripts in `mCH_domain_clustering/` are used to cluster mCH domains based on their mCH dynamics across tissues as well as visualization of the mCH dynamics of clustered mCH domain (Figure 4c and Extended Data Figure 7d).
 
+### WGCNA
+`WGCNA/run_WGCNA.R` is used for performing WGCNA on RNA-seq data and clustering genes into co-expression modules.
