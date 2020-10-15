@@ -98,7 +98,7 @@ all_datasets = {"E10_5":['ENCSR349UOB',#CF
 
 os.system("mkdir -p raw_ChIP/")
 
-for age in all_datasets.iterkeys():
+for age in all_datasets.keys():
     for accession in all_datasets[age]:
         # This URL locates the ENCODE biosample with accession number ENCSR800JXR
         URL = "https://www.encodeproject.org/reference-epigenomes/"+accession+"/?frame=embedded"
@@ -114,17 +114,19 @@ for age in all_datasets.iterkeys():
             # Get information
             if related_dataset['assay_term_name'] != "ChIP-seq":
                 continue
-            short_name = fullname2short[related_dataset['biosample_term_name']]
+            short_name = fullname2short[related_dataset['biosample_ontology']['term_name']]
 
             ## Filter
             #if not (short_name == "HB"):
             #    continue
-            
-            mark = related_dataset['target']['label']
 
-            #if not (mark == "H3K27ac"):
-            if not (mark == "Control"):
-                continue            
+            if "Bing Ren" not in related_dataset['lab']["title"]:
+                continue
+            
+            if 'target' not in related_dataset:
+                mark = "Control"
+            else:
+                mark = related_dataset['target']['label']
 
             if mark == "H3K9me3" or mark == "H3K36me3":
                 continue;
@@ -152,3 +154,4 @@ for age in all_datasets.iterkeys():
                                        "-o",
                                        output_filename
                 ])
+                

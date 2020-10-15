@@ -105,7 +105,7 @@ for accession in accessions:
 
     # Get information
     assay_type = related_dataset['assay_term_name'].replace(" ","_")
-    short_name = fullname2short[related_dataset['biosample_term_name']]
+    short_name = fullname2short[related_dataset['biosample_ontology']['term_name']]
     age = related_dataset['aliases'][0].split(":")[1].split("_")[0].upper()
 
     # print
@@ -124,5 +124,4 @@ for accession in accessions:
                                "-o",
                                output_filename
         ])
-
-            
+   
